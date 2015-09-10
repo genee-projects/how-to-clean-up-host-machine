@@ -23,9 +23,9 @@ dpkg -l | grep lims2
 ls -al /var/lib/dpkg/info/lims2*
 ```
 
-如上, 针对 lims2 的 prerm 需要对所有内容进行注释（不使用 dpkg 自带的处理机制), 仅返回 `exit 0` 即可
-针对, lims2.list 文件的内容进行清空(不进行文件 purge)
-针对, lims2.postrm 文件内容进行清空(不进行 purge 操作处理)
+* 针对, lims2 的 prerm 需要对所有内容进行注释（不使用 dpkg 自带的处理机制), 仅返回 `exit 0` 即可
+* 针对, lims2.list 文件的内容进行清空(不进行文件 purge)
+* 针对, lims2.postrm 文件内容进行清空(不进行 purge 操作处理)
 
 **注意: 需要先检查 gini 是否被部署, gini 如果被部署, 可能引发 nodejs 删除后也会删除 gini 的情况产生**
 
