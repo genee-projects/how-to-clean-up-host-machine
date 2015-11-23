@@ -206,7 +206,7 @@ sudo rm -rf /etc/apt/sources.list.d/ondrej-php5-oldstable-precise.list.save
 
 ```
 sudo service ganglia-monitor stop 
-sudo apt-get remove --purge ganglia-monitor libganglia1
+sudo apt-get remove --purge -y ganglia-monitor libganglia1
 sudo rm -rf /etc/ganglia/
 ```
 
