@@ -201,3 +201,17 @@ sudo docker exec -it lims2 supervisorctl restart php5-fpm
 sudo rm -rf /etc/apt/sources.list.d/ondrej-php5-oldstable-precise.list
 sudo rm -rf /etc/apt/sources.list.d/ondrej-php5-oldstable-precise.list.save
 ```
+
+## 删除 ganglia 
+
+```
+sudo service ganglia-monitor stop 
+sudo apt-get remove --purge ganglia-monitor libganglia1
+sudo rm -rf /etc/ganglia/
+```
+
+## 删除 kill_zombie_puppet.sh 
+
+```
+sudo rm -rf /etc/kill_zombie_puppet.sh
+```
